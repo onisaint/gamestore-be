@@ -1,0 +1,29 @@
+{
+  "name": "game-store",
+  "version": "0.0.1",
+  "description": "API backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "game",
+    "store",
+    "api",
+    "backend"
+  ],
+  "author": "Madhu Kumar D S <madhudskumar@live.in>",
+  "license": "",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.16.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "express-session": "^1.15.0",
+    "errorhandler": "^1.5.0",
+    "helmet": "^3.4.0",
+    "mongoose": "^4.7.9",
+    "moltin": "^2.2.0"
+  }
+}
