@@ -1,6 +1,12 @@
-var games = require('../../staticDB/games.json'),
+var Moltin = require('../../config/moltin').Moltin,
     response = require('../../shared/util/util.respose')
 
 exports.fetchGames = function(req, res){
-    response.res200(res, games);
+     Moltin.Products.All()
+     .then((products) => {
+        response.res200(res, products.data);
+    },() => {
+        response.res500(res)
+    })
+    
 }

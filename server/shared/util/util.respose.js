@@ -17,6 +17,12 @@ exports.res400 = function (res) {
     })
 };
 
+exports.res500 = function(res){
+    response(res, 500, {
+        ok:false,
+        payload:'something went wrong'
+    })
+}
 
 /**
  *
