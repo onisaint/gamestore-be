@@ -12,7 +12,7 @@ Note : except ROOT/test no other routes are accessed withot token
   6.  Store the transaction data in postgres/mysql for future reference. [I use MongoDB + i didn't have the setup time, will skip for now]
   7.  Generate a pdf invoice copy of above processed order and save it on local device [done / will get stored on ./orders/]
   
-#tollStack
+# TechStack
   Node, motlin, Angular 4 and some of the tools enlisted in package.json
   
 Assumptions:
