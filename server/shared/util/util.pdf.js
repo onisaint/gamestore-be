@@ -1,8 +1,9 @@
 const pdf = require('html-to-pdf'),
-    config = require('../../config/config')
+    config = require('../../config/config'),
+    response = require('./util.respose');
 
-exports.toPdf = function (order, cart) {
-    const html = `
+exports.toPdf = function (order, cart, res, cartObj) {
+    let html = `
         <h1>YOUR CART</h1>
         <div *ngIf="bootstraped">
         <table class="uk-table" >
@@ -39,6 +40,11 @@ exports.toPdf = function (order, cart) {
                 console.log(error);
             } else {
                 console.log(success);
+                cartObj.Delete()
+                    .then(() => {
+                        response.res200(res, order.data.id);
+                    }, err => console.error(err));
+
             }
         }
     );

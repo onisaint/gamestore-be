@@ -1,5 +1,6 @@
 const Moltin = require('../../config/moltin').Moltin,
-    response = require("../../shared/util/util.respose");
+    response = require("../../shared/util/util.respose"),
+    pdf = require('../../shared/util/util.pdf')
 
 const _cart = Moltin.Cart;
 
@@ -31,7 +32,8 @@ exports.add = function (req, res) {
 }
 
 exports.remove = function (req, res) {
-    _cart.RemoveItem(req.body._id)
+    console.log(req.body._id)
+    _cart.RemoveItem(req.body._id.toString())
         .then((cart) => {
             console.log(cart)
             response.res200(res, cart);
@@ -65,7 +67,10 @@ exports.checkout = function (req, res) {
         //dummy
         Moltin.Orders.Get(order.data.id)
             .then((order) => {
-                response.res200(res, order);
+                _cart.Items()
+                    .then((cart) => {
+                        pdf.toPdf(order, cart, res, _cart);
+                    }, err => console.error(err))
             }, err => console.log(err));
         //Declamair : tried with all 3 method 
         /*

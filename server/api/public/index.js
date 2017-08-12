@@ -7,6 +7,6 @@ public
     .get('/endsession', require('./cart').deleteCart)
     .post('/cart', require('./cart').add)
     .post('/checkout', require('./cart').checkout)
-    .delete('/cart', require('./cart').remove)
+    .post('/delitem', require('./cart').remove)
 
 module.exports = public
