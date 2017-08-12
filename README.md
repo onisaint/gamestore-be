@@ -1,5 +1,6 @@
 # GameStore
 ## Development server
+do a `npm i`
 Run `node app.js` on root directory. Navigate to `http://localhost:7777/`.
 Note : except ROOT/test no other routes are accessed withot token
 
