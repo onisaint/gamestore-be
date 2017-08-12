@@ -19,11 +19,12 @@
     "body-parser": "^1.16.0",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.1",
+    "errorhandler": "^1.5.0",
     "express": "^4.14.0",
     "express-session": "^1.15.0",
-    "errorhandler": "^1.5.0",
     "helmet": "^3.4.0",
-    "mongoose": "^4.7.9",
-    "moltin": "^2.2.0"
+    "jwt-simple": "^0.5.1",
+    "moltin": "^2.2.0",
+    "mongoose": "^4.7.9"
   }
 }

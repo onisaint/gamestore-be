@@ -17,6 +17,19 @@ exports.res400 = function (res) {
     })
 };
 
+
+/**
+ * Unauthorised
+ * @param res
+ */
+exports.res401 = function (res) {
+    response(res, 401, {
+        ok: false,
+        payload: 'Unauthorised'
+    })
+};
+
+
 exports.res500 = function(res){
     response(res, 500, {
         ok:false,
